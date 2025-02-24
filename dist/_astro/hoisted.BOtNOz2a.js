@@ -1,0 +1,1 @@
+import{g as a}from"./ViewTransitions.astro_astro_type_script_index_0_lang.CIdm53Il.js";document.addEventListener("astro:page-load",()=>{a.from(".animate",{opacity:0,y:20,duration:1,stagger:.2,ease:"power2.out"})});
