@@ -1,0 +1,38 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/techStack', label: 'TechStack' },
+  { href: '/projects', label: 'Projects' },
+];
+
+const { pathname } = Astro.url;
+const isActive = (href: string) =>
+  href === pathname || href === pathname.replace(/\/$/, '');
+---
+
+<nav class="flex py-4 px-4 justify-between items-center">
+  <ul class="flex flex-wrap p-0 m-0">
+    {
+      links.map(({ href, label }) => (
+        <li class="opacity-80 list-none text-[0.95rem]">
+          <a
+            href={href}
+            class={[
+              isActive(href) ? 'active-link' : '',
+              'px-2 py-1 rounded-lg no-underline text-grey-400 hover:text-grey-900',
+            ].join(' ')}
+          >
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .active-link {
+    background-color: var(--grey-900);
+    color: var(--background);
+  }
+</style>

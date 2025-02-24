@@ -1,0 +1,111 @@
+---
+import Main from '../layouts/Main.astro';
+import Cards from '../components/Cards.astro';
+---
+
+<Main title="About Me">
+  <div transition:name="cards">
+    <Cards
+      cards={[
+        {
+          title: 'Tech',
+          gradientFrom: '#fde68a',
+          gradientTo: '#fca5a5',
+          to: '/techStack',
+        },
+        {
+          title: 'Projects',
+          gradientFrom: '#6ee7b7',
+          gradientTo: '#9333ea',
+          to: '/projects',
+        },
+      ]}
+    />
+  </div>
+  <div class="relative mt-20 mb-1 animate-text opacity-0 translate-y-5">
+    <h2 class="text-2xl">Projects I Have Worked On</h2>
+  </div>
+  <div class="card relative p-1 rounded-md tech-cards">
+    <div class="flex justify-items-start relative p-4 border-2 border-gray-200 dark:border-gray-700 mt-8 rounded-3xl">
+      <div class="relative rounded-lg">
+        <h3 class="text-xl inline-block">㈜넥슨코리아</h3>
+        <p class="text-xs font-thin inline-block text-neutral-50">2018.07 - 2018.10</p>
+        <p class="text-sm pt-3">&middot; FIFA ONLINE4 / 팀원(단기계약직, 팀원 휴직으로 인한 대체인력)</p>
+        <p class="text-sm pt-2">&middot; FIFA ONLINE4 서비스 유지 및 보수</p>
+        <p class="text-sm pt-2">&middot; HTML, CSS, jQuery, Javascript, GSAP, SVN, Adobe Photoshop 활용</p>
+      </div>
+    </div>
+    <div class="flex justify-items-start relative p-4 border-2 border-gray-200 dark:border-gray-700 mt-8 rounded-3xl">
+      <div class="relative rounded-lg">
+        <h3 class="text-xl inline-block">주식회사 씨티티디</h3>
+        <p class="text-xs font-thin inline-block text-neutral-50">2019.02 - 2020.03</p>
+        <p class="text-sm pt-3">&middot; 퍼블리싱팀 / 팀원(정규직)</p>
+        <p class="text-sm pt-2">&middot; e커머스 플랫폼(11번가)의 프로모션 페이지 제작, eBay 판매자 통합 관리 페이지 운영</p>
+        <p class="text-sm pt-2">&middot; HTML, CSS/SCSS, jQuery, Javascript, SVN, slack, Adobe Photoshop 활용</p>
+      </div>
+    </div>
+    <div class="flex justify-items-start relative p-4 border-2 border-gray-200 dark:border-gray-700 mt-8 rounded-3xl">
+      <div class="relative rounded-lg">
+        <h3 class="text-xl inline-block">주식회사 디케이테크인</h3>
+        <p class="text-xs font-thin inline-block text-neutral-50">2020.11 - 2021.02</p>
+        <p class="text-sm pt-3">&middot; FT개발1팀 / 팀원(정규직)</p>
+        <p class="text-sm pt-2">&middot; 카카오페이지/카카오하모니/카카오톡서랍 등 카카오 서비스 전반에 대한 UI 개발 참여, 자사 홈페이지(PC/MO) 리뉴얼 작업</p>
+        <p class="text-sm pt-2">&middot; HTML, SCSS/SASS, Javascript, Velocity, git, Figma, Zeplin, Sketch 활용</p>
+      </div>
+    </div>
+    <div class="flex justify-items-start relative p-4 border-2 border-gray-200 dark:border-gray-700 mt-8 rounded-3xl">
+      <div class="relative rounded-lg">
+        <h3 class="text-xl inline-block">㈜플레이위드코리아</h3>
+        <p class="text-xs font-thin inline-block text-neutral-50">2021.06 - 2023.04</p>
+        <p class="text-sm pt-3">&middot; 기술지원실 서비스개발팀 / 연구원(정규직)</p>
+        <p class="text-sm pt-2">&middot; 국내외 자사 웹서비스 운영, NFT 등 자사 신규 사업 웹페이지 및 이벤트페이지(PC/MO) 구축 및 운영, 자사 신규게임 관련 서비스 구축 및 운영, BI 플랫폼 화면 구축</p>
+        <p class="text-sm pt-2">&middot; HTML, CSS, jQuery, Javascript, React, Semantic UI React, GSAP, slack, JIRA, Adobe Photoshop 활용</p>
+        <div class="text-sm pt-2">&middot; <a href="https://sea.sealm.com" target="_blank">동남아 SealM 홈페이지 바로가기(동남아 SealM의 PC, MO 운영 및 유지/보수)</a></div>
+        <div class="text-sm pt-2">&middot; <a href="https://www.rohan.co.kr/" target="_blank">국내 Rohan 홈페이지 바로가기(국내 Rohan 홈페이지 유지/보수)</a></div>
+        <div class="text-sm pt-2">&middot; <a href="https://www.sealm.co.kr/" target="_blank">국내 SealM 홈페이지 바로가기(국내 SealM 홈페이지 유지/보수)</a></div>
+        <div class="text-sm pt-2">&middot; <a href="https://www.rohan.co.kr/event/event_20220615/index.html" target="_blank">국내 Rohan 이벤트 페이지(2022.06) 바로가기</a></div>
+        <div class="text-sm pt-2">&middot; <a href="https://www.rohan.co.kr/event/event_20220810/index.html" target="_blank">국내 Rohan 이벤트 페이지(2022.08) 바로가기</a></div>
+      </div>
+    </div>
+    <div class="flex justify-items-start relative p-4 border-2 border-gray-200 dark:border-gray-700 mt-8 rounded-3xl">
+      <div class="relative rounded-lg">
+        <h3 class="text-xl inline-block">한화생명보험</h3>
+        <p class="text-xs font-thin inline-block text-neutral-50">2023.06</p>
+        <p class="text-sm pt-3">&middot; 프리랜서</p>
+        <p class="text-sm pt-2">&middot; 신규 서비스 웹페이지(PC/MO) 화면 UI 개발</p>
+        <p class="text-sm pt-2">&middot; HTML, CSS, jQuery, Javascript, Adobe Indesign, Adobe Photoshop 활용</p>
+        <div class="text-sm pt-2">&middot; <a href="https://hanwha-need.com/signature/" target="_blank">한화생명보험 X Need 서비스페이지 바로가기</a></div>
+      </div>
+    </div>
+    <div class="flex justify-items-start relative p-4 border-2 border-gray-200 dark:border-gray-700 mt-8 rounded-3xl">
+      <div class="relative rounded-lg">
+        <h3 class="text-xl inline-block">원유니버스</h3>
+        <p class="text-xs font-thin inline-block text-neutral-50">2023.04 - 2023.08</p>
+        <p class="text-sm pt-3">&middot; 프리랜서</p>
+        <p class="text-sm pt-2">&middot; 관리자 페이지 화면 UI 개발</p>
+        <p class="text-sm pt-2">&middot; HTML, SCSS/SASS, jQuery, Bootstrap, Chart.js, Adobe XD 활용</p>
+      </div>
+    </div>
+    <div class="flex justify-items-start relative p-4 border-2 border-gray-200 dark:border-gray-700 mt-8 rounded-3xl">
+      <div class="relative rounded-lg">
+        <h3 class="text-xl inline-block">OK금융그룹(OKIP, OK저축은행, OKDS)</h3>
+        <p class="text-xs font-thin inline-block text-neutral-50">2023.09 - 현재</p>
+        <p class="text-sm pt-3">&middot; 정규직</p>
+        <p class="text-sm pt-2">&middot; OKpay/OK비교대출 서비스 운영(담당 퍼블리셔), OK저축은행 서비스 운영, OK캐피탈 웹 및 앱 전체 리뉴얼(진행중)</p>
+        <p class="text-sm pt-2">&middot; HTML, CSS, SCSS/SASS, jQuery, Javascript, Vue, WebSqaure, ChangeFlow, SVN, git, Figma 활용</p>
+      </div>
+    </div>
+  </div>
+</Main>
+<script>
+  import { gsap } from 'gsap';
+
+  document.addEventListener('astro:page-load', () => {
+    gsap.to('.animate-text', {
+      opacity: 1,
+      duration: 1,
+      y: 0,
+      ease: 'power2.out',
+    });
+  });
+</script>

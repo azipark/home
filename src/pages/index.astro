@@ -1,0 +1,75 @@
+---
+import Main from '../layouts/Main.astro';
+import Cards from '../components/Cards.astro';
+import { Image } from 'astro:assets';
+---
+
+<Main title="HY Kelly">
+  <div class="flex items-center justify-center relative h-[calc(100vh-128px)]">
+    <div class="flex flex-col items-center">
+      <div class="flex items-center flex-wrap pb-2 md:space-x-8 animate">
+        <Image
+          class="object-cover rounded-full w-[124px] h-[124px] max-md:w-24 max-md:h-24"
+          src="/images/profile.png"
+          alt="Avatar"
+          width={124}
+          height={124}
+          loading="eager"
+        />
+        <div class="flex-1 min-w-[300px] md:ml-4 max-[410px]:mt-4">
+          <h1
+            class="text-2xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 ml-4"
+          >
+            박혜연
+          </h1>
+          <p
+            class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-4 ml-4 text-wrap"
+          >
+            UI 개발을 하고 있는 박혜연입니다.
+          </p>
+        </div>
+      </div>
+      <div transition:name="cards">
+        <Cards
+          cards={[
+            {
+              title: 'Tech',
+              gradientFrom: '#fde68a',
+              gradientTo: '#fca5a5',
+              to: '/techStack',
+            },
+            {
+              title: 'Projects',
+              gradientFrom: '#6ee7b7',
+              gradientTo: '#9333ea',
+              to: '/projects',
+            },
+          ]}
+        />
+      </div>
+    </div>
+  </div>
+</Main>
+
+<script>
+  import gsap from 'gsap';
+
+  document.addEventListener('astro:page-load', () => {
+    gsap.from('.animate', {
+      opacity: 0,
+      y: 20,
+      duration: 1,
+      stagger: 0.2,
+      ease: 'power2.out',
+    });
+  });
+</script>
+
+<style>
+  .floating-span {
+    display: inline-block;
+  }
+  #copyLinkContainer.hidden {
+    display: none;
+  }
+</style>
